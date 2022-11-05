@@ -15,3 +15,11 @@ export const getMoviesByName = (name) => {
     return axios.get(URL).then(response => response.data);
 };
 
+export const getMovieDetail = (movieId) => {
+    const URL = `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`;
+
+    return axios.get(URL).then(response => response.data);
+};
+
+
+

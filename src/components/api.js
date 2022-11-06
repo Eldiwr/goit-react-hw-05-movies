@@ -21,5 +21,18 @@ export const getMovieDetail = (movieId) => {
     return axios.get(URL).then(response => response.data);
 };
 
+export const getMovieCast = (movieId) => {
+    const URL = `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`;
+
+    return axios.get(URL).then(response => response.data);
+};
+
+export const getMovieReviews = (movieId) => {
+    const URL = `${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US&page=1`;
+
+    return axios.get(URL).then(response => response.data);
+};
+
+
 
 

@@ -1,4 +1,5 @@
-import { NavLink, useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
+import { FilmCardWrapper,Poster,DetailsCard,FilmTitle,Datas,DatasTitle,AddTitle,AddList,LinkStyle,AddItem } from "./FilmCard.styled";
 
 export const FilmCard = ({ film, genres }) => {
     const location = useLocation();
@@ -6,39 +7,36 @@ export const FilmCard = ({ film, genres }) => {
     return (
 
         <>
-            <div>
-                <img
+            <FilmCardWrapper>
+                <Poster
                     src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
                     alt="poster"
                 />
 
-                <h2>{ film.original_title } ({film.release_date.slice(0, 4)})</h2>
+                <DetailsCard>
+                    <FilmTitle>{ film.original_title } ({film.release_date.slice(0, 4)})</FilmTitle>
 
-                <p>User Score: {film.vote_average}</p>
+                    <Datas>User Score: {film.vote_average}</Datas>
 
-                <h3>Overview</h3>
+                    <DatasTitle>Overview</DatasTitle>
 
-                <p>{film.overview}</p>
-                <p>Genres</p>
-                <p>{genres}</p>
-            </div>
+                    <Datas>{film.overview}</Datas>
+                    <DatasTitle>Genres</DatasTitle>
+                    <Datas>{genres}</Datas>
+                </DetailsCard>               
+            </FilmCardWrapper>
 
-            <h3>Additional information</h3>
+            <AddTitle>Additional information</AddTitle>
 
-            <ul>
-                <li>
-                    <NavLink to={`/movies/${film.id}/cast`} state={location.state}>Cast</NavLink>
-                </li>
+            <AddList>
+                <AddItem>
+                    <LinkStyle to={`/movies/${film.id}/cast`} state={location.state}>Cast</LinkStyle>
+                </AddItem>
 
-                <li>
-                    <NavLink to={`/movies/${film.id}/reviews`} state={location.state}>Reviews</NavLink>
-                </li>
-            </ul>
-        </>
-
-        
-
-
-        
+                <AddItem>
+                    <LinkStyle to={`/movies/${film.id}/reviews`} state={location.state}>Reviews</LinkStyle>
+                </AddItem>
+            </AddList>
+        </>        
     )
 }

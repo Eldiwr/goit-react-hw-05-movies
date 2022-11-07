@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { GoBackButton } from "./BackButton.styled";
 
 export const BackButton = ({ location }) => {
     let navigate = useNavigate();
@@ -8,6 +9,6 @@ export const BackButton = ({ location }) => {
     };
 
     return (
-        <button type="button" onClick={goBack}>Back</button>
+        <GoBackButton type="button" onClick={goBack}>Back</GoBackButton>
     );
 };

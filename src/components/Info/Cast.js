@@ -1,6 +1,7 @@
 import { getMovieCast } from "components/api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { AddTitle,CastList, } from "./Info.styled";
 
 export const Cast = () => {
 
@@ -18,9 +19,9 @@ export const Cast = () => {
 
     return (
         <>
-            <h2>Cast</h2>
+            <AddTitle>Cast</AddTitle>
 
-            <ul>
+            <CastList>
                 {cast.map(({ id, profile_path, name, character }) => {
                     return (
 
@@ -40,7 +41,7 @@ export const Cast = () => {
                     )
 
                 })}
-            </ul>
+            </CastList>
         </>       
     )
 }

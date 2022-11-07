@@ -1,11 +1,12 @@
-import { useEffect, useState, useLocation } from "react"
+import { useEffect, useState} from "react"
 import { getMovieDetail } from "components/api";
-import { Outlet, useParams } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import { FilmCard } from "components/FilmCard/FilmCard";
+import { BackButton } from "components/BackButton/BackButton";
 
 export const MovieReview = () => {
-
     
+    const location = useLocation();
     const { filmId } = useParams();
     const [film, setFilm] = useState(null);
     const [genres, setGenres] = useState('');
@@ -27,7 +28,8 @@ export const MovieReview = () => {
     }, [film]);
 
     return (
-        <>
+        <>  
+            <BackButton location={location} />
             {film && <FilmCard film={film} genres={genres} />}
             <Outlet/>
         </>

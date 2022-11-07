@@ -29,7 +29,7 @@ export const SearchBar = ({onSubmit}) => {
                     name="name"
                     onChange={handleInputForm}
                 />
-                <button>Search</button>
+                <button type="submit">Search</button>
             </form>
         </>
     )

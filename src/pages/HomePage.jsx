@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTrandingMovies } from "components/api";
-import { NavLink } from "react-router-dom";
+import { LinkStyle, TrandTitle, TrendMoviesList } from "components/MoviesList/MoviesList.styled";
 
 export const HomePage = () => {
 
@@ -17,11 +17,11 @@ export const HomePage = () => {
 
     return (
         <>
-            <h1>Tranding today</h1>
+            <TrandTitle>Tranding today</TrandTitle>
 
             <ul>
                 {movies.map(movie => (
-                    <li key={movie.id}><NavLink to={`/movies/${movie.id}`}>{ movie.title }</NavLink></li>
+                    <TrendMoviesList key={movie.id}><LinkStyle to={`/movies/${movie.id}`}>{ movie.title }</LinkStyle></TrendMoviesList>
             ))}
             </ul>     
         </>  

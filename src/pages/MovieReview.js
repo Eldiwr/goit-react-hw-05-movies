@@ -4,7 +4,7 @@ import { Outlet, useLocation, useParams } from "react-router-dom";
 import { FilmCard } from "components/FilmCard/FilmCard";
 import { BackButton } from "components/BackButton/BackButton";
 
-export const MovieReview = () => {
+export default function MovieReview () {
     
     const location = useLocation();
     const { filmId } = useParams();

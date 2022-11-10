@@ -4,7 +4,7 @@ import { getMoviesByName } from 'components/api';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 
-export const MoviesPage = () => {
+export default function MoviesPage () {
 
     const [movieName, setMovieName] = useState('');
     const [movies, setMovies] = useState([]);

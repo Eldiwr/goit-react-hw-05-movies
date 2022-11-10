@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getTrandingMovies } from "components/api";
 import { LinkStyle, TrandTitle, TrendMoviesList } from "components/MoviesList/MoviesList.styled";
 
-export const HomePage = () => {
+export default function HomePage () {
 
     const [movies, setMovies] = useState([]);
 

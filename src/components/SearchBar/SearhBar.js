@@ -15,6 +15,11 @@ export const SearchBar = ({onSubmit}) => {
         
         event.preventDefault();
 
+        if (name === '') {
+            alert('Write name !!!');
+            return;
+        }
+
         onSubmit(name);
         
         setName('');

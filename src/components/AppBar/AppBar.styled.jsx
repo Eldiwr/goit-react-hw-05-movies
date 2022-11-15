@@ -21,14 +21,15 @@ export const NavLinks= styled(NavLink)`
   margin-right: 15px;
   text-decoration: none;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   color: black;
 
   &.active{
     color: orange;
-  }
+  };
 
   :hover:not(.active),
-  :focus-visible:not(.active){
+  :focus-visible:not(.active) {
     color: black;
   }
 `;

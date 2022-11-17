@@ -30,11 +30,11 @@ export const FilmCard = ({ film, genres }) => {
 
             <AddList>
                 <AddItem>
-                    <LinkStyle to={`/movies/${film.id}/cast`} state={location.state}>Cast</LinkStyle>
+                    <LinkStyle to={`cast`} state={location.state}>Cast</LinkStyle>
                 </AddItem>
 
                 <AddItem>
-                    <LinkStyle to={`/movies/${film.id}/reviews`} state={location.state}>Reviews</LinkStyle>
+                    <LinkStyle to={`reviews`} state={location.state}>Reviews</LinkStyle>
                 </AddItem>
             </AddList>
         </>        

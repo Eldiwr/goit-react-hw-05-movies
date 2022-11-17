@@ -4,6 +4,7 @@ import { FilmCardWrapper,Poster,DetailsCard,FilmTitle,Datas,DatasTitle,AddTitle,
 export const FilmCard = ({ film, genres }) => {
     const location = useLocation();
 
+
     return (
 
         <>
@@ -22,7 +23,9 @@ export const FilmCard = ({ film, genres }) => {
 
                     <Datas>{film.overview}</Datas>
                     <DatasTitle>Genres</DatasTitle>
-                    <Datas>{genres}</Datas>
+                    <AddList>{film.genres.map(genre => (
+                        <AddItem key={genre.id}>{ genre.name }</AddItem>
+                    ))}</AddList>
                 </DetailsCard>               
             </FilmCardWrapper>
 

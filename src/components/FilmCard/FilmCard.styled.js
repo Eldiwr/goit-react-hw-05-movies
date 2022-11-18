@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 
-export const FilmCardWrapper=styled.div`
+export const FilmCardWrapper = styled.div`
+    padding: 20px;
     display: flex;
     margin-bottom: 20px;
 `
@@ -27,7 +28,8 @@ export const DatasTitle = styled.h3`
     font-size: 25px;
 `;
 export const AddTitle = styled.h4`
-     margin-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
     font-size: 22px;
 `;
 export const AddList = styled.ul`
@@ -49,7 +51,4 @@ export const LinkStyle = styled(NavLink)`
   &:focus {
     color: #dc6300;
   }
-  /* &:visited {
-    color: #634688;
-  } */
 `;

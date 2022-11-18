@@ -9,6 +9,6 @@ export const BackButton = ({ location }) => {
     };
 
     return (
-        <GoBackButton type="button" onClick={goBack}>Back</GoBackButton>
+        <GoBackButton type="button" onClick={goBack}>&laquo; Back</GoBackButton>
     );
 };

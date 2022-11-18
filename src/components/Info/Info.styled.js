@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const AddTitle = styled.h5`
+    padding: 20px;
     margin-bottom: 20px;
     font-size: 22px;
 `;
